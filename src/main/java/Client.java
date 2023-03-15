@@ -14,7 +14,7 @@ public class Client {
         try (Socket socket = new Socket(LOCALHOST, Server.PORT);
              PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
              BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-             Scanner scanner = new Scanner(System.in);) {
+             Scanner scanner = new Scanner(System.in)) {
 
             out.println(scanner.nextLine());
             System.out.println(in.readLine());
